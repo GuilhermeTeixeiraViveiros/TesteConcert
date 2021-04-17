@@ -1,15 +1,6 @@
 {
   "colaboradores": [
     {
-      "nome": "Guilherme Teixeira",
-      "nascimento": "1997-12-04",
-      "CPF": "13516102608",
-      "genero": "1",
-      "ativo": true,
-      "setor": "TI",
-      "id": 4
-    },
-    {
       "nome": "Clarissa Costa Antunes",
       "nascimento": "1998-08-28",
       "CPF": "11381627609",
@@ -26,6 +17,15 @@
       "ativo": true,
       "setor": "TI",
       "id": 7
+    },
+    {
+      "nome": "",
+      "nascimento": null,
+      "CPF": "",
+      "genero": "",
+      "ativo": false,
+      "setor": "",
+      "id": 8
     }
   ]
 }
