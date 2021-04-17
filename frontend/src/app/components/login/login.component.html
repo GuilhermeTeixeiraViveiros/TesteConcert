@@ -1,1 +1,21 @@
-<p>login works!</p>
+    <mat-card class="mat-elevation-z4">
+        <mat-card-title>Login</mat-card-title>
+            <form style="display:flex; flex-direction: column;">
+                <mat-form-field>
+                    <input matInput placeholder="username" [(ngModel)] = "username" name="username">             
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="password" [(ngModel)] = "password" name="password">             
+                </mat-form-field>    
+            </form>
+    
+            
+        <button class="top-espacing" mat-raised-button (click)="login()" color="primary">
+            Login
+        </button>
+        
+        <button class="top-espacing" mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    
+    </mat-card>
