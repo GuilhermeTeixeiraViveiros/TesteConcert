@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-title>Deletar colaborador</mat-card-title>
+    <form style="display:flex; flex-direction: column;">
+        <mat-form-field>
+            <input matInput disabled placeholder="Nome" [(ngModel)] = "colaborador.nome" name="nome">             
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput disabled placeholder="CPF" [(ngModel)] = "colaborador.CPF" name="CPF">             
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input type="date" matInput disabled placeholder="Data de Nascimento" [(ngModel)] = "colaborador.nascimento" name="nascimento">             
+        </mat-form-field>
+        
+        <mat-radio-group [(ngModel)] = "colaborador.genero" class="radio" name="genero">
+            <label>Gênero:</label>
+            <mat-radio-button disabled value="1">Masculino</mat-radio-button>
+            <mat-radio-button disabled value="2">Feminino</mat-radio-button>
+          </mat-radio-group>
+          
+          <mat-checkbox disabled [(ngModel)] = "colaborador.ativo" class="top-espacing" name="ativo">Ativo</mat-checkbox>
+    
+          <label class="top-espacing">Setor:</label>
+          <select disabled [(ngModel)]="colaborador.setor" name="setor">
+              <option>{{ colaborador.setor }}</option>
+          </select>
+        </form>
+    
+
+    <button class="top-espacing" mat-raised-button (click)="deleteColaborador()" color="accent">
+        Deletar
+    </button>
+    
+    <button class="top-espacing" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
+
