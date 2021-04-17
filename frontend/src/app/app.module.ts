@@ -13,7 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { ColaboradorCrudComponent } from './views/colaborador-crud/colaborador-crud.component';
-import { ColaboradorCreateComponent } from './components/products/colaborador-create/colaborador-create.component';
+import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule  } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,14 +23,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {  MatInputModule } from '@angular/material/input';
-import { ColaboradorReadComponent } from './components/products/colaborador-read/colaborador-read.component';
+import { ColaboradorReadComponent } from './components/colaboradores/colaborador-read/colaborador-read.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import localePt from  '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { ColaboradorUpdateComponent } from './components/products/colaborador-update/colaborador-update.component';
-import { ColaboradorDeleteComponent } from './components/products/colaborador-delete/colaborador-delete.component';
+import { ColaboradorUpdateComponent } from './components/colaboradores/colaborador-update/colaborador-update.component';
+import { ColaboradorDeleteComponent } from './components/colaboradores/colaborador-delete/colaborador-delete.component';
 
 registerLocaleData(localePt);
 

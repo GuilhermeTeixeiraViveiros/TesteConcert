@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './views/home/home.component';
 import {ColaboradorCrudComponent} from './views/colaborador-crud/colaborador-crud.component';
-import { ColaboradorCreateComponent } from './components/products/colaborador-create/colaborador-create.component';
-import { ColaboradorUpdateComponent } from './components/products/colaborador-update/colaborador-update.component';
-import { ColaboradorDeleteComponent } from './components/products/colaborador-delete/colaborador-delete.component';
+import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
+import { ColaboradorUpdateComponent } from './components/colaboradores/colaborador-update/colaborador-update.component';
+import { ColaboradorDeleteComponent } from './components/colaboradores/colaborador-delete/colaborador-delete.component';
 
 const routes: Routes = [
   {

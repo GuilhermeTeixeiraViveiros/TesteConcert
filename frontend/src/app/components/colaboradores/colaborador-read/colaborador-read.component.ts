@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ColaboradorService } from '../../products/colaborador.service';
+import { ColaboradorService } from '../../colaboradores/colaborador.service';
 import { Colaborador } from '../colaborador-model';
 
 @Component({
