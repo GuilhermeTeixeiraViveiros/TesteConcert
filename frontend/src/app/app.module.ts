@@ -25,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from  '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { AuthService } from './components/login/auth.service';
+import { AuthGuardService } from './components/guards/auth-guard.service';
 
 registerLocaleData(localePt);
 
@@ -60,7 +61,7 @@ registerLocaleData(localePt);
     provide: LOCALE_ID,
     useValue: 'pt-BR'
   },
-  AuthService
+  AuthService, AuthGuardService
 ],
   bootstrap: [AppComponent]
 })

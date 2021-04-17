@@ -26,4 +26,7 @@ export class AuthService {
   logout(){
     this.mostrarMenuEmitter.emit(false)
   }
+  usuarioEstaAutenticado(): boolean{
+    return this.usuarioAutenticado
+  }
 }
