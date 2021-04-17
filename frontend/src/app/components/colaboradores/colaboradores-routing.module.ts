@@ -7,22 +7,22 @@ import { ColaboradorDeleteComponent } from './colaborador-delete/colaborador-del
 
 const colaboradoresRoutes: Routes = [
   {
-    path: "colaboradores",
+    path: "",
     component: ColaboradorCrudComponent
   },
-  {
-    path: "colaboradores/create",
-    component: ColaboradorCreateComponent
-  },
-  {
-    path: "colaboradores/update/:id",
-    component: ColaboradorUpdateComponent
-  },
-  {
-    path: "colaboradores/delete/:id",
-    component: ColaboradorDeleteComponent
-  }
-];
+      {
+        path: "create",
+        component: ColaboradorCreateComponent
+      },
+      {
+        path: "update/:id",
+        component: ColaboradorUpdateComponent
+      },
+      {
+        path: "delete/:id",
+        component: ColaboradorDeleteComponent
+      }  
+    ]
 
 @NgModule({
   imports: [RouterModule.forChild(colaboradoresRoutes)],
