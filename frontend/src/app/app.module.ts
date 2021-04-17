@@ -24,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import localePt from  '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { AuthService } from './components/login/auth.service';
 
 registerLocaleData(localePt);
 
@@ -58,7 +59,9 @@ registerLocaleData(localePt);
   providers: [{
     provide: LOCALE_ID,
     useValue: 'pt-BR'
-  }],
+  },
+  AuthService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

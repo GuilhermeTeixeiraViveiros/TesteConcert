@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderService } from '../template/header/header.service';
+import { AuthService } from './auth.service';
+import { User } from './user-model';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,10 @@ import { HeaderService } from '../template/header/header.service';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
-  username: string
-  password: string
-  constructor(private router: Router, private headerService: HeaderService) { 
+  
+  user: User = new User();
+  msg: string = ""
+  constructor(private router: Router, private headerService: HeaderService, private authService: AuthService) { 
     this.headerService.headerData = {
       title : 'Login',
       icon : 'login',
@@ -21,12 +24,17 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log(this.username)
-    console.log(this.password)
+    if(this.authService.login(this.user)){
+      this.router.navigate(["/"])
+    } else{
+      this.msg = "Acesso Negado!"
+      console.log(this.msg)
+    }
+    
   }
 
   
   cancel(){
-    return
+    this.router.navigate(["/"])
   }
 }

@@ -2,15 +2,15 @@
         <mat-card-title>Login</mat-card-title>
             <form style="display:flex; flex-direction: column;">
                 <mat-form-field>
-                    <input matInput placeholder="username" [(ngModel)] = "username" name="username">             
+                    <input matInput placeholder="username" [(ngModel)] = "user.username" name="username">             
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="password" placeholder="password" [(ngModel)] = "password" name="password">             
+                    <input matInput type="password" placeholder="password" [(ngModel)] = "user.password" name="password">             
                 </mat-form-field>    
             </form>
     
             
-        <button class="top-espacing" mat-raised-button (click)="login()" color="primary">
+        <button type="submit" class="top-espacing" mat-raised-button (click)="login()" color="primary">
             Login
         </button>
         
