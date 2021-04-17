@@ -1,15 +1,6 @@
 {
   "colaboradores": [
     {
-      "nome": "Clarissa Costa Antunes",
-      "nascimento": "1998-08-28",
-      "CPF": "11381627609",
-      "genero": "2",
-      "ativo": true,
-      "setor": "Diretoria",
-      "id": 5
-    },
-    {
       "nome": "sdaf",
       "nascimento": "2222-01-01",
       "CPF": "asdf",
@@ -26,6 +17,15 @@
       "ativo": false,
       "setor": "",
       "id": 8
+    },
+    {
+      "nome": "fff",
+      "nascimento": null,
+      "CPF": "ff",
+      "genero": "1",
+      "ativo": true,
+      "setor": "TI",
+      "id": 9
     }
   ]
 }

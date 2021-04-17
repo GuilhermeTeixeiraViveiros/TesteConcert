@@ -25,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from  '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ColaboradoresModule } from './components/colaboradores/colaboradores.module';
+import { LoginModule } from './components/login/login.module';
 
 registerLocaleData(localePt);
 
@@ -34,7 +35,7 @@ registerLocaleData(localePt);
     HeaderComponent,
     FooterComponent,
     NavComponent,
-     HomeComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,8 @@ registerLocaleData(localePt);
     MatSortModule,
     MatRadioModule,
     MatCheckboxModule,
-    ColaboradoresModule
+    ColaboradoresModule,
+    LoginModule
   ],
   providers: [{
     provide: LOCALE_ID,
