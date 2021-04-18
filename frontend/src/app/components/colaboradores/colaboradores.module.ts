@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ColaboradoresRoutingModule } from "./colaboradores-routing.module";
 import { SharedModule } from "../shared/shared.module";
+import { NgxSpinnerModule } from 'ngx-spinner'
 @NgModule({
     imports:[
         CommonModule,
@@ -34,7 +35,8 @@ import { SharedModule } from "../shared/shared.module";
         MatCardModule,
         MatButtonModule,
         ColaboradoresRoutingModule,
-        SharedModule
+        SharedModule,
+        NgxSpinnerModule
     ],
     declarations: [    
         ColaboradorCrudComponent,

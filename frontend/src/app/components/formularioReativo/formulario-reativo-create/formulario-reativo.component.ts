@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { FormularioReativoService } from '../formulario-reativo.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { FormularioReativoService } from '../formulario-reativo.service';
 export class FormularioReativoComponent implements OnInit {
 
   formulario: FormGroup
-  constructor(private formBuilder: FormBuilder, private fRService: FormularioReativoService,
+  constructor(private spinnerService: NgxSpinnerService, private formBuilder: FormBuilder, private fRService: FormularioReativoService,
     private router: Router) { }
 
   ngOnInit(): void {

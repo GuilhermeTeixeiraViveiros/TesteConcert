@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ColaboradorService } from '../../colaboradores/colaborador.service';
 import { Colaborador } from '../colaborador-model';
 
@@ -14,14 +15,17 @@ export class ColaboradorReadComponent implements OnInit {
   todosColaboradores : Colaborador[]
   colaboradoresExibidos : Colaborador[]
 
-  constructor(private colaboradorService: ColaboradorService) { }
+  constructor(private spinnerService: NgxSpinnerService, private colaboradorService: ColaboradorService) { }
   displayedColumns = ['id', 'nome', 'CPF', 'nascimento', 'genero', 'ativo', 'setor', 'update', 'delete'];
   ngOnInit(): void {
+    this.spinnerService.show();
     this.colaboradorService.read().subscribe(colaborador =>{
       this.todosColaboradores = colaborador
       this.colaboradoresExibidos = colaborador
-      
     })
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 500);
   }
 
   getTotalCount() : number{

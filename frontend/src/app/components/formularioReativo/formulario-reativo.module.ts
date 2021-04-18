@@ -18,6 +18,7 @@ import { FormularioReativoUpdateComponent } from './formulario-reativo-update/fo
 import { FormularioReativoDeleteComponent } from './formulario-reativo-delete/formulario-reativo-delete.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { SharedModule } from "../shared/shared.module";
+import { NgxSpinnerModule } from 'ngx-spinner'
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { SharedModule } from "../shared/shared.module";
         MatButtonModule,
         MatRadioModule,
         FormsModule,
-        SharedModule
+        SharedModule,
+        NgxSpinnerModule
     ],
     declarations: [
         FormularioReativoComponent,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { FormularioReativoService } from '../formulario-reativo.service';
 import { Pessoa } from '../pessoa-model';
 
@@ -10,12 +11,16 @@ import { Pessoa } from '../pessoa-model';
 export class FormularioReativoReadComponent implements OnInit {
   todasPessoas: Pessoa[]
   pessoasExibidas: Pessoa[]
-  constructor(private fRService: FormularioReativoService) { }
+  constructor(private spinnerService: NgxSpinnerService, private fRService: FormularioReativoService) { }
   displayedColumns = ['id', 'nome', 'email', 'idade', 'genero' ,'update', 'delete'];
   ngOnInit(): void {
+    this.spinnerService.show();
     this.fRService.read().subscribe((pessoas) =>{
       this.pessoasExibidas = pessoas
       this.todasPessoas = pessoas
+      setTimeout(() => {
+        this.spinnerService.hide();
+      }, 500);
     })
   }
   getTotalCount(): number{

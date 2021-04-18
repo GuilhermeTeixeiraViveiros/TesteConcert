@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: "colaboradores",
     loadChildren: () => import('./components/colaboradores/colaboradores.module').then(m => m.ColaboradoresModule),
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
   },
   {
     path: "login",
