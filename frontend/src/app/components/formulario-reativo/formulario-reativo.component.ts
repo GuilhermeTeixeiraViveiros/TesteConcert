@@ -1,9 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { catchError, map } from 'rxjs/operators';
+import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormularioReativoService } from './formulario-reativo.service';
-import { Pessoa } from './pessoa-model';
 
 @Component({
   selector: 'app-formulario-reativo',
@@ -13,21 +11,28 @@ import { Pessoa } from './pessoa-model';
 export class FormularioReativoComponent implements OnInit {
 
   formulario: FormGroup
-  baseurl = "http://localhost:3001/pessoas"
-  constructor(private formBuilder: FormBuilder, private fRService: FormularioReativoService ) { }
-
+  constructor(private formBuilder: FormBuilder, private fRService: FormularioReativoService,
+     private router: Router ) { }
+     
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      nome: [null],
-      email: [null]
+      nome: [null, Validators.required],
+      email: [null, [ Validators.required,  Validators.email]],
+      idade: [null]
     })
   };
 
-  onSubmit(): void{
-    console.log("bateu")
+  onSubmit(formDirective: FormGroupDirective): void{
     this.fRService.create(this.formulario.value).subscribe(() =>{
-      this.fRService.ShowMessage("Colaborador inserido!")
+      formDirective.resetForm();
+      this.fRService.ShowMessage("Pessoa inserida!")
+      this.formulario.reset()
     })
+    
+  }
+  cancelar(){
+    this.formulario.reset()
+    this.router.navigate(["/"])
   }
 
 }
