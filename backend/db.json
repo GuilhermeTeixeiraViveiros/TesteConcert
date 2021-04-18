@@ -1,34 +1,8 @@
 {
   "colaboradores": [
     {
-      "nome": "sdaf",
-      "nascimento": "2222-01-01",
-      "CPF": "asdf",
-      "genero": "1",
-      "ativo": true,
-      "setor": "TI",
-      "id": 7
-    },
-    {
-      "nome": "",
-      "nascimento": null,
-      "CPF": "",
-      "genero": "",
-      "ativo": false,
-      "setor": "",
-      "id": 8
-    },
-    {
-      "nome": "fff",
-      "nascimento": null,
-      "CPF": "ff",
-      "genero": "1",
-      "ativo": true,
-      "setor": "TI",
-      "id": 9
-    },
-    {
-      "id": 10
+      "id": 10,
+      "genero": "1"
     },
     {
       "id": 11
@@ -45,10 +19,10 @@
   ],
   "pessoas": [
     {
-      "nome": "Guilherme",
-      "email": "viveirosgt@gmail.com",
-      "idade": 9,
-      "id": 12
+      "nome": "novo colaborador",
+      "email": "gtviveiros@hotmail.com",
+      "idade": 7,
+      "id": 1
     }
   ]
 }

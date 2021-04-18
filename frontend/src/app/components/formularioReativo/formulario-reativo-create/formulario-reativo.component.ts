@@ -27,6 +27,7 @@ export class FormularioReativoComponent implements OnInit {
       formDirective.resetForm();
       this.fRService.ShowMessage("Pessoa inserida!")
       this.formulario.reset()
+      this.router.navigate(["/formulario-reativo"])
     })
 
   }
