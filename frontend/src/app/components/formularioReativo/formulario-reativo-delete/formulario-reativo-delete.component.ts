@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { FormularioReativoService } from '../formulario-reativo.service';
 import { Pessoa } from '../pessoa-model';
 
@@ -11,7 +12,7 @@ import { Pessoa } from '../pessoa-model';
 })
 export class FormularioReativoDeleteComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private fRService: FormularioReativoService,
+  constructor(private spinnerService: NgxSpinnerService, private formBuilder: FormBuilder, private fRService: FormularioReativoService,
     private router: Router, private route: ActivatedRoute) { }
 
   pessoa: Pessoa
@@ -36,13 +37,17 @@ export class FormularioReativoDeleteComponent implements OnInit {
   }
 
   onSubmit(formDirective: FormGroupDirective): void {
-   const id = this.formulario.controls['id'].value
+    this.spinnerService.show();
+  setTimeout(() => {
+    this.spinnerService.hide();
+  }, 500);
+    const id = this.formulario.controls['id'].value
       this.fRService.delete(id).subscribe(() => {
       formDirective.resetForm();
       this.fRService.ShowMessage("Pessoa excluída!")
       this.formulario.reset()
-      this.router.navigate(["/formulario-reativo"])
     })
+    this.router.navigate(["/formulario-reativo"])
   }
   
   cancelar() {

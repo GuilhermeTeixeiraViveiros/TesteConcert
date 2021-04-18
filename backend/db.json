@@ -140,6 +140,13 @@
       "idade": 12,
       "genero": "1",
       "id": 13
+    },
+    {
+      "nome": "novo colaborador",
+      "email": "gtviveiros@hotmail.com",
+      "idade": 23432,
+      "genero": "1",
+      "id": 14
     }
   ]
 }

@@ -25,7 +25,7 @@ export class ColaboradorReadComponent implements OnInit {
     })
     setTimeout(() => {
       this.spinnerService.hide();
-    }, 500);
+    }, 2000);
   }
 
   getTotalCount() : number{

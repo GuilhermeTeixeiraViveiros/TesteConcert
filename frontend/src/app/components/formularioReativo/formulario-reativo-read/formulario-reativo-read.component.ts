@@ -18,10 +18,10 @@ export class FormularioReativoReadComponent implements OnInit {
     this.fRService.read().subscribe((pessoas) =>{
       this.pessoasExibidas = pessoas
       this.todasPessoas = pessoas
-      setTimeout(() => {
-        this.spinnerService.hide();
-      }, 500);
     })
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 2000);
   }
   getTotalCount(): number{
     return this.pessoasExibidas?.length

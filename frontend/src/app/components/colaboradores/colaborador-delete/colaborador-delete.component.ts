@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ColaboradorService } from '../../colaboradores/colaborador.service';
 import { Colaborador } from '../colaborador-model';
 
@@ -11,7 +12,7 @@ import { Colaborador } from '../colaborador-model';
 export class ColaboradorDeleteComponent implements OnInit {
   id: string
   colaborador: Colaborador
-  constructor(private colaboradorService : ColaboradorService, private router: Router, 
+  constructor(private spinnerService: NgxSpinnerService, private colaboradorService : ColaboradorService, private router: Router, 
     private route: ActivatedRoute) { }
 
     ngOnInit(): void {
@@ -22,10 +23,14 @@ export class ColaboradorDeleteComponent implements OnInit {
   }
   
 deleteColaborador(): void{
+  this.spinnerService.show();
+  setTimeout(() => {
+    this.spinnerService.hide();
+  }, 500);
   this.colaboradorService.delete(this.id).subscribe(()=>{
     this.colaboradorService.ShowMessage('Colaborador excluído')
-    this.router.navigate(['/colaboradores'])
   })
+  this.router.navigate(['/colaboradores'])
 }
 
   cancel(): void{

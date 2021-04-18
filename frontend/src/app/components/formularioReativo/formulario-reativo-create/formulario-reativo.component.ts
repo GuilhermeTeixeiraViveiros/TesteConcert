@@ -25,14 +25,18 @@ export class FormularioReativoComponent implements OnInit {
   };
   
   onSubmit(formDirective: FormGroupDirective): void {
+    this.spinnerService.show();
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 500);
     this.fRService.create(this.formulario.value).subscribe(() => {
       formDirective.resetForm();
       this.fRService.ShowMessage("Pessoa inserida!")
       this.formulario.reset()
-      this.router.navigate(["/formulario-reativo"])
     })
-
+    this.router.navigate(["/formulario-reativo"])
   }
+  
   cancelar() {
     this.formulario.reset()
     this.router.navigate(["/formulario-reativo"])
