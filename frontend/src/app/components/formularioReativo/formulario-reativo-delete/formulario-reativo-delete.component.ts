@@ -39,7 +39,7 @@ export class FormularioReativoDeleteComponent implements OnInit {
    const id = this.formulario.controls['id'].value
       this.fRService.delete(id).subscribe(() => {
       formDirective.resetForm();
-      this.fRService.ShowMessage("Pessoa atualizada!")
+      this.fRService.ShowMessage("Pessoa excluída!")
       this.formulario.reset()
       this.router.navigate(["/formulario-reativo"])
     })

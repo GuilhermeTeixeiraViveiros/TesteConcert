@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-gender-selector',
@@ -9,10 +9,12 @@ export class GenderSelectorComponent implements OnInit {
   @Input() todos: number;
   @Input() masculino: number
   @Input() feminino: number
+  @Output() genderSelctionChanged : EventEmitter<string> = new EventEmitter<string>(); 
   constructor() { }
   genero: string
   ngOnInit(): void {
   }
   onChange(){
+    this.genderSelctionChanged.emit(this.genero);
   }
 }

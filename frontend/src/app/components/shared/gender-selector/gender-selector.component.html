@@ -1,7 +1,12 @@
+
 <br>
+<div class="caixa-seletor-genero">
 <mat-radio-group [(ngModel)] = "genero" (change)=onChange() class="radio" name="genero">
     <label>Mostrar:</label>
-    <mat-radio-button value="1">Todos({{todos}})</mat-radio-button>
-    <mat-radio-button value="2">Masculino({{masculino}})</mat-radio-button>
-    <mat-radio-button value="3">Feminino({{feminino}})</mat-radio-button>
+    <mat-radio-button value="0">Todos({{todos}})</mat-radio-button>
+    <mat-radio-button value="1">Masculino({{masculino}})</mat-radio-button>
+    <mat-radio-button value="2">Feminino({{feminino}})</mat-radio-button>
+    <p><B>COMPONENTE COMPARTILHADO EM AMBOS OS CRUD'S: Seletor de gênero</B></p>
   </mat-radio-group>
+
+</div>
