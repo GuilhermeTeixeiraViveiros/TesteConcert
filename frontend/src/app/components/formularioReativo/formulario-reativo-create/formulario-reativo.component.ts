@@ -12,25 +12,25 @@ export class FormularioReativoComponent implements OnInit {
 
   formulario: FormGroup
   constructor(private formBuilder: FormBuilder, private fRService: FormularioReativoService,
-     private router: Router ) { }
-     
+    private router: Router) { }
+
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
       nome: [null, Validators.required],
-      email: [null, [ Validators.required,  Validators.email]],
+      email: [null, [Validators.required, Validators.email]],
       idade: [null]
     })
   };
 
-  onSubmit(formDirective: FormGroupDirective): void{
-    this.fRService.create(this.formulario.value).subscribe(() =>{
+  onSubmit(formDirective: FormGroupDirective): void {
+    this.fRService.create(this.formulario.value).subscribe(() => {
       formDirective.resetForm();
       this.fRService.ShowMessage("Pessoa inserida!")
       this.formulario.reset()
     })
-    
+
   }
-  cancelar(){
+  cancelar() {
     this.formulario.reset()
     this.router.navigate(["/formulario-reativo"])
   }
