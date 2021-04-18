@@ -32,7 +32,7 @@ export class FormularioReativoComponent implements OnInit {
   }
   cancelar(){
     this.formulario.reset()
-    this.router.navigate(["/"])
+    this.router.navigate(["/formulario-reativo"])
   }
 
 }
