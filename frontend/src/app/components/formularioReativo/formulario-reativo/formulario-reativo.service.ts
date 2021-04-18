@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { EMPTY, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { Pessoa } from '../formulario-reativo/pessoa-model';
+import { Pessoa } from './pessoa-model';
 @Injectable({
   providedIn: 'root'
 })
