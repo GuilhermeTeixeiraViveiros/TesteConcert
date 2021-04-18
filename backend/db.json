@@ -1,33 +1,6 @@
 {
   "colaboradores": [
     {
-      "nome": "gyuilhemre",
-      "nascimento": "",
-      "CPF": "afdgasg",
-      "genero": "",
-      "ativo": true,
-      "setor": "RH",
-      "id": 13
-    },
-    {
-      "nome": "",
-      "nascimento": null,
-      "CPF": "",
-      "genero": "2",
-      "ativo": false,
-      "setor": "",
-      "id": 14
-    },
-    {
-      "nome": "",
-      "nascimento": null,
-      "CPF": "",
-      "genero": "",
-      "ativo": false,
-      "setor": "",
-      "id": 15
-    },
-    {
       "nome": "",
       "nascimento": null,
       "CPF": "",
@@ -92,13 +65,6 @@
     }
   ],
   "pessoas": [
-    {
-      "nome": "novo colaborador",
-      "email": "gtviveiros@hotmail.com",
-      "idade": 21,
-      "genero": "2",
-      "id": 7
-    },
     {
       "nome": "asdfwaf",
       "email": "gtviveiros@hotmail.com",

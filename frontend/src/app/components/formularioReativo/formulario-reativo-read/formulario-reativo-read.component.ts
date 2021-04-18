@@ -24,13 +24,13 @@ export class FormularioReativoReadComponent implements OnInit {
     }, 2000);
   }
   getTotalCount(): number{
-    return this.pessoasExibidas?.length
+    return this.todasPessoas?.length
   }
   getMaleCount(): number{
-    return this.pessoasExibidas?.filter((e)=> e.genero === "1").length
+    return this.todasPessoas?.filter((e)=> e.genero === "1").length
   }
   getFemaleCount(): number{
-    return this.pessoasExibidas?.filter((e)=> e.genero === "2").length
+    return this.todasPessoas?.filter((e)=> e.genero === "2").length
   }
   onGenderSelectorChange(selectedGender: string): void{
     selectedGender === "0" ? this.pessoasExibidas = this.todasPessoas : 
