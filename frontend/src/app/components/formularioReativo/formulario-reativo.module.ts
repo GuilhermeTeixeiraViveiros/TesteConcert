@@ -12,6 +12,9 @@ import { MatInputModule } from "@angular/material/input";
 import { MatTableModule } from "@angular/material/table";
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { FormularioReativoReadComponent } from './formulario-reativo-read/formulario-reativo-read.component';
+import { FormularioReativoCrudComponent } from '../../views/formulario-reativo-crud/formulario-reativo-crud.component';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -26,7 +29,9 @@ import { MatButtonModule } from '@angular/material/button';
     ],
     declarations: [
         FormularioReativoComponent,
-        FormDebugComponent
+        FormDebugComponent,
+        FormularioReativoReadComponent,
+        FormularioReativoCrudComponent
     ],
     providers: [FormularioReativoService]
 })

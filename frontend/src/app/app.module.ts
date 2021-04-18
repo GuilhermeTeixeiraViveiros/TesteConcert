@@ -26,7 +26,6 @@ import localePt from  '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { AuthService } from './components/login/auth.service';
 import { AuthGuardService } from './components/guards/auth-guard.service';
-import { FormularioReativoCrudComponent } from './views/formulario-reativo-crud/formulario-reativo-crud/formulario-reativo-crud.component';
 
 registerLocaleData(localePt);
 
@@ -36,8 +35,7 @@ registerLocaleData(localePt);
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent,
-    FormularioReativoCrudComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
