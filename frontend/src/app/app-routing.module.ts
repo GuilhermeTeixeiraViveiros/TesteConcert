@@ -15,6 +15,11 @@ const routes: Routes = [
   {
     path: "login",
     loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: "formulario-reativo",
+    loadChildren: () => import('./components/formulario-reativo/formulario-reativo.module').then(m => m.FormularioReativoModule),
+    canActivate: [AuthGuardService]
   }
 ];
 @NgModule({
