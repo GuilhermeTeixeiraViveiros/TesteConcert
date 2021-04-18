@@ -18,7 +18,7 @@ import { ColaboradorService } from "./colaborador.service";
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ColaboradoresRoutingModule } from "./colaboradores-routing.module";
-
+import { SharedModule } from "../shared/shared.module";
 @NgModule({
     imports:[
         CommonModule,
@@ -33,7 +33,8 @@ import { ColaboradoresRoutingModule } from "./colaboradores-routing.module";
         MatCheckboxModule,
         MatCardModule,
         MatButtonModule,
-        ColaboradoresRoutingModule
+        ColaboradoresRoutingModule,
+        SharedModule
     ],
     declarations: [    
         ColaboradorCrudComponent,

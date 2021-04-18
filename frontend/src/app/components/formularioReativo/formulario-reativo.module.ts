@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FormularioReactivoRoutingModule } from "./formulario-reativo-routing-module";
 import { FormularioReativoComponent } from "./formulario-reativo-create/formulario-reativo.component";
 import { FormDebugComponent } from '../form-debug/form-debug.component';
@@ -16,6 +16,8 @@ import { FormularioReativoReadComponent } from './formulario-reativo-read/formul
 import { FormularioReativoCrudComponent } from '../../views/formulario-reativo-crud/formulario-reativo-crud.component';
 import { FormularioReativoUpdateComponent } from './formulario-reativo-update/formulario-reativo-update.component';
 import { FormularioReativoDeleteComponent } from './formulario-reativo-delete/formulario-reativo-delete.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
     imports: [
@@ -28,6 +30,9 @@ import { FormularioReativoDeleteComponent } from './formulario-reativo-delete/fo
         MatTableModule,
         MatCardModule,
         MatButtonModule,
+        MatRadioModule,
+        FormsModule,
+        SharedModule
     ],
     declarations: [
         FormularioReativoComponent,

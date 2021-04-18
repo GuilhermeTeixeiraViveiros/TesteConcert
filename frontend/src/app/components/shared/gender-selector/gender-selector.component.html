@@ -1,0 +1,7 @@
+<br>
+<mat-radio-group [(ngModel)] = "genero" (change)=onChange() class="radio" name="genero">
+    <label>Mostrar:</label>
+    <mat-radio-button value="1">Todos({{todos}})</mat-radio-button>
+    <mat-radio-button value="2">Masculino({{masculino}})</mat-radio-button>
+    <mat-radio-button value="3">Feminino({{feminino}})</mat-radio-button>
+  </mat-radio-group>

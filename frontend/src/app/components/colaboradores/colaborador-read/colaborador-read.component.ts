@@ -8,6 +8,9 @@ import { Colaborador } from '../colaborador-model';
   styleUrls: ['./colaborador-read.component.sass']
 })
 export class ColaboradorReadComponent implements OnInit {
+  todos: number
+  masculino: number
+  feminino: number
 
   colaborador : Colaborador[]
   constructor(private colaboradorService: ColaboradorService) { }
@@ -16,5 +19,14 @@ export class ColaboradorReadComponent implements OnInit {
     this.colaboradorService.read().subscribe(colaborador =>{
       this.colaborador = colaborador
     })
+  }
+  getTotalCount() : number{
+    return this.colaborador?.length;
+  }
+  getMaleCount() : number{
+    return this.colaborador?.filter((e)=> e.genero === "1").length;
+  }
+  getFemaleCount() : number{
+    return this.colaborador?.filter((e)=> e.genero === "2").length;
   }
 }

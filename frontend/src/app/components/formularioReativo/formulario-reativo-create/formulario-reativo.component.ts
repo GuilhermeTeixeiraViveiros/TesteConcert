@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormularioReativoService } from '../formulario-reativo.service';
 
@@ -15,13 +15,14 @@ export class FormularioReativoComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      nome: [null, Validators.required],
-      email: [null, [Validators.required, Validators.email]],
-      idade: [null]
-    })
+    this.formulario = new FormGroup({
+      nome: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      idade: new FormControl(null),
+      genero: new FormControl('')
+    });
   };
-
+  
   onSubmit(formDirective: FormGroupDirective): void {
     this.fRService.create(this.formulario.value).subscribe(() => {
       formDirective.resetForm();
