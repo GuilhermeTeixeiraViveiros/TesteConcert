@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormularioReativoCrudComponent } from 'src/app/views/formulario-reativo-crud/formulario-reativo-crud/formulario-reativo-crud.component';
-import { FormularioReativoComponent } from './formulario-reativo.component';
+import { FormularioReativoComponent } from './formulario-reativo-create/formulario-reativo.component';
 
 const colaboradoresRoutes: Routes = [
   {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormularioReativoService } from './formulario-reativo.service';
+import { FormularioReativoService } from '../formulario-reativo.service';
 
 @Component({
   selector: 'app-formulario-reativo',

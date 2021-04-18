@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: "formulario-reativo",
-    loadChildren: () => import('./components/formularioReativo/formulario-reativo/formulario-reativo.module').then(m => m.FormularioReativoModule),
+    loadChildren: () => import('./components/formularioReativo/formulario-reativo.module').then(m => m.FormularioReativoModule),
     canActivate: [AuthGuardService]
   }
 ];
