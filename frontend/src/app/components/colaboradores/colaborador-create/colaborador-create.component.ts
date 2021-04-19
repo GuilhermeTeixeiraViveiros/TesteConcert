@@ -11,10 +11,7 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker'
   styleUrls: ['./colaborador-create.component.sass']
 })
 export class ColaboradorCreateComponent implements OnInit {
-  options = [
-    { name: "option1", value: 1 },
-    { name: "option2", value: 2 }
-  ]
+
   datepickerConfig: Partial<BsDatepickerConfig>
   selectedOption = ''
   colaborador: Colaborador = {

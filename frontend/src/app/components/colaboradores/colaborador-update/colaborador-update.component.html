@@ -8,8 +8,8 @@
             <input matInput placeholder="CPF" [(ngModel)] = "colaborador.CPF" name="CPF">             
         </mat-form-field>
         
-        <mat-form-field>
-            <input type="date" matInput placeholder="Data de Nascimento" [(ngModel)] = "colaborador.nascimento" name="nascimento">             
+        <mat-form-field >
+            <input type="text" bsDatepicker [bsConfig]="datepickerConfig" matInput placeholder="Data de Nascimento: DD/MM/AAAA" [(ngModel)] = "colaborador.nascimento" name="nascimento">             
         </mat-form-field>
         
         <mat-radio-group [(ngModel)] = "colaborador.genero" class="radio" name="genero">

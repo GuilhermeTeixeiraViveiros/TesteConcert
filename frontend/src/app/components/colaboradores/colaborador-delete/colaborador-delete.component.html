@@ -8,10 +8,6 @@
             <input matInput disabled placeholder="CPF" [(ngModel)] = "colaborador.CPF" name="CPF">             
         </mat-form-field>
         
-        <mat-form-field>
-            <input type="date" matInput disabled placeholder="Data de Nascimento" [(ngModel)] = "colaborador.nascimento" name="nascimento">             
-        </mat-form-field>
-        
         <mat-radio-group [(ngModel)] = "colaborador.genero" class="radio" name="genero">
             <label>Gênero:</label>
             <mat-radio-button disabled value="1">Masculino</mat-radio-button>
