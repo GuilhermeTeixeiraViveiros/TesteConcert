@@ -20,6 +20,11 @@ const routes: Routes = [
     path: "formulario-reativo",
     loadChildren: () => import('./components/formularioReativo/formulario-reativo.module').then(m => m.FormularioReativoModule),
     canActivate: [AuthGuardService]
+  },
+  {
+    path: "mapa",
+    loadChildren: () => import('./components/mapas/mapas.module').then(m => m.MapasModule),
+    canActivate: [AuthGuardService]
   }
 ];
 @NgModule({
