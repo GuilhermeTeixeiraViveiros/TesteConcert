@@ -20,6 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ColaboradoresRoutingModule } from "./colaboradores-routing.module";
 import { SharedModule } from "../shared/shared.module";
 import { NgxSpinnerModule } from 'ngx-spinner'
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
+
 @NgModule({
     imports:[
         CommonModule,
@@ -36,7 +38,8 @@ import { NgxSpinnerModule } from 'ngx-spinner'
         MatButtonModule,
         ColaboradoresRoutingModule,
         SharedModule,
-        NgxSpinnerModule
+        NgxSpinnerModule,
+        BsDatepickerModule.forRoot()
     ],
     declarations: [    
         ColaboradorCrudComponent,

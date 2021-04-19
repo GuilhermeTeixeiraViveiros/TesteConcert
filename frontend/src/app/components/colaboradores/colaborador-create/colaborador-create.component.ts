@@ -3,6 +3,7 @@ import { ColaboradorService } from '../colaborador.service';
 import { Router } from '@angular/router'
 import { Colaborador } from '../colaborador-model';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker'
 
 @Component({
   selector: 'app-colaborador-create',
@@ -14,7 +15,7 @@ export class ColaboradorCreateComponent implements OnInit {
     { name: "option1", value: 1 },
     { name: "option2", value: 2 }
   ]
-
+  datepickerConfig: Partial<BsDatepickerConfig>
   selectedOption = ''
   colaborador: Colaborador = {
     nome: '',
@@ -27,7 +28,12 @@ export class ColaboradorCreateComponent implements OnInit {
   
   setores: string[] = ['RH','TI','Secretaria','Diretoria']
 
-  constructor(private spinnerService: NgxSpinnerService, private colaboradorService: ColaboradorService, private router: Router) { }
+  constructor(private spinnerService: NgxSpinnerService, private colaboradorService: ColaboradorService, private router: Router) { 
+    this.datepickerConfig = Object.assign({}, { 
+      containerClass: 'theme-dark-blue',
+      dateInputFormat: 'DD/MM/YYYY'
+    })
+  }
 
   ngOnInit(): void {
   }
