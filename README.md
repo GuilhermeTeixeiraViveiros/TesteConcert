@@ -44,4 +44,6 @@ Foi requisitado no projeto 2 páginas de CRUD com as seguintes especificações:
     - npm install
   - Inicializar o backend e o frontend executando o seguinte comando nos respectivos diretórios:
     - npm start
+
+### A APLICAÇÃO ESTARÁ DISPONÍVEL EM: 'localhost:4200' ou no endereço fornecido pelo output do comando de inicialização do frontend( npm start)
  
