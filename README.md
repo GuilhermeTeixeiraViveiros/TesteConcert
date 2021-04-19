@@ -3,6 +3,10 @@ Este projeto faz parte do teste para estagiário desenvolvedor da Concert Techno
 
 Foi requisitado no projeto 2 páginas de CRUD com as seguintes especificações:
 
+### Tela de Login com usuário e senha estáticos no frontend:
+  -Login: "concert"
+  -Senha: "prova"
+
 ### Primeira CRUD: (Colaoradores)
   - Deve conter pelo menos 6 campos incluindo 'Select', 'Checkbox', 'Radio' e 'Date'.
  
