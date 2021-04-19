@@ -1,7 +1,6 @@
 <mat-card class="max-widht">
     <mat-card-title>Atualizar Pessoa</mat-card-title>
-<form class="form-horizontal" [formGroup]="formulario" #formDirective="ngForm"
- (ngSubmit) ="onSubmit(formDirective)">
+<form [formGroup]="formulario" #formDirective="ngForm" (ngSubmit) ="onSubmit(formDirective)">
     <div class="form-group">
         <mat-form-field>
             <input matInput type="text" class="form-control" formControlName="nome" id="nome" placeholder="Nome">

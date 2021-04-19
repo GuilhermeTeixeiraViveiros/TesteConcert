@@ -21,6 +21,11 @@
                     account_circle
                 </i> Formulário Reativo
             </a>
+            <a *ngIf="mostrarMenu" mat-list-item routerLink='/mapa'>
+                <i class="material-icons">
+                    place
+                </i> Mapa
+            </a>
             <a *ngIf="mostrarMenu" mat-list-item routerLink='/' (click)="logout()">
                 <i class="material-icons">
                     logout
