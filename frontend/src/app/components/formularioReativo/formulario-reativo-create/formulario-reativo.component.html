@@ -3,7 +3,7 @@
     <form [formGroup]="formulario" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)">
         <div class="form-group">
             <mat-form-field>
-                <input matInput type="text" class="form-control max-widht1" formControlName="nome" id="nome"
+                <input matInput type="text" class="form-control" formControlName="nome" id="nome"
                     placeholder="Nome">
             </mat-form-field>
         </div>
@@ -20,9 +20,6 @@
             </mat-form-field>
         </div>
 
-        
-
-
         <div class="form-group">
             <label for="genero">Gênero:</label>
             <div>
@@ -36,10 +33,6 @@
            </div>
         </div>
 
-
-
-
-        
         <button mat-raised-button color="primary" type="submit" class="btn btn-primary top-espacing"
             [disabled]="! formulario.valid">Salvar</button>
         <button class="btn top-espacing" mat-raised-button (click)="cancelar()">Cancelar</button>
