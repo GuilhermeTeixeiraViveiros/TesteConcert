@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mapas.component.sass']
 })
 export class MapasComponent{
-  title = 'Localização da Empresa';
+  title = 'Mapa';
   zoom = 15;
   raio = 150;
   lat = -19.937719;
