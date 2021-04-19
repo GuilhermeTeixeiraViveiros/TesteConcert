@@ -2,6 +2,13 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
+<button class="top-espacing" mat-raised-button (click)="goToPcaLiberdade()" color="warn">
+  Praça da Liberdade
+</button>
+
+<button class="top-espacing" mat-raised-button (click)="goToMinasTenisClube()" color="warn">
+  Minas Tenis CLube
+</button>
 
 <button type="submit" class="top-espacing" mat-raised-button (click)="goToConcert()" color="warn">
   Concert
@@ -10,10 +17,15 @@
 <button class="top-espacing" mat-raised-button (click)="goToMcDonalds()" color="warn">
   McDonalds
 </button>
+<button class="top-espacing" mat-raised-button (click)="goToLifeCenter()" color="warn">
+  Lifecenter
+</button>
+
+
 
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
   <agm-marker [latitude]="latMarker" [longitude]="lngMarker"></agm-marker>
 
   <agm-circle [latitude]="latCircle" [longitude]="lngCircle" [radius]="raio"></agm-circle>
-
+  <agm-polygon [paths]="paths"></agm-polygon>
 </agm-map>
