@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
         this.spinnerService.hide();
       }, 500);
       this.msg = "Acesso Negado!"
-      console.log(this.msg)
     }
     
   }
