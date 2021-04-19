@@ -27,7 +27,6 @@ export class ColaboradorReadComponent implements OnInit {
     this.colaboradorService.read().subscribe(colaborador => {
       this.todosColaboradores = colaborador;
       this.colaboradoresExibidos = this.todosColaboradores;
-      console.log(this.colaboradoresExibidos);
     });
   }
 
