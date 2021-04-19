@@ -17,10 +17,10 @@ export class FormularioReativoDeleteComponent implements OnInit {
 
   pessoa: Pessoa
   formulario: FormGroup = this.formBuilder.group({
-    nome: [{value: null, disabled: false }],
-    email: [{value: null, disabled: false }],
-    idade: [{value: null, disabled: false }],
-    id: [{value: null, disabled: false }],
+    nome: [{value: null, disabled: true }],
+    email: [{value: null, disabled: true }],
+    idade: [{value: null, disabled: true }],
+    id: [{value: null, disabled: true }]
   })
 
   ngOnInit(): void {

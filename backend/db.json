@@ -30,20 +30,6 @@
   ],
   "pessoas": [
     {
-      "nome": "UUU",
-      "email": "uuu@gmail.com",
-      "idade": 22,
-      "genero": "1",
-      "id": 1
-    },
-    {
-      "nome": "QQQ",
-      "email": "qqq@yahoo.com",
-      "idade": 60,
-      "genero": "2",
-      "id": 2
-    },
-    {
       "nome": "SSS",
       "email": "s@yahoo.com",
       "idade": 18,
