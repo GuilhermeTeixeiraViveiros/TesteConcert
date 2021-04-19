@@ -31,6 +31,12 @@ Foi requisitado no projeto 2 páginas de CRUD com as seguintes especificações:
     - As mensagens são apresentadas ao usuário sempre que há uma requisição ao backend (CRUD).
     
   - O JSON-SERVER foi utilizado para mockar o backend.
+
+### Atividade Extra:
+  - Foi implementado também um componente de mapa com as seguintes características:
+      - Polígono ligando os pontos de interesse.
+      - Círculo dinamico em volta do ponto de interesse.
+      - Marcador no ponto de interesse.
   
 ## Procedimentos para inicializar o projeto:
   - Clonar o repositório disponível em: https://github.com/GuilhermeTeixeiraViveiros/TesteConcert
