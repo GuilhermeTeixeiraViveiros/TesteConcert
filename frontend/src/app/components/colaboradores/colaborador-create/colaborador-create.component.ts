@@ -33,14 +33,19 @@ export class ColaboradorCreateComponent implements OnInit {
   }
   
   createColaborador(): void{
+    this.mostrarCarregando();
+    
+    this.colaboradorService.create(this.colaborador).subscribe(()=>{
+      this.colaboradorService.ShowMessage("Colaborador inserido!")
+      this.router.navigate(['/colaboradores'])
+    })
+  }
+
+  private mostrarCarregando() {
     this.spinnerService.show();
     setTimeout(() => {
       this.spinnerService.hide();
     }, 500);
-    this.colaboradorService.create(this.colaborador).subscribe(()=>{
-      this.colaboradorService.ShowMessage("Colaborador inserido!")
-    })
-    this.router.navigate(['/colaboradores'])
   }
 
   cancel(): void{

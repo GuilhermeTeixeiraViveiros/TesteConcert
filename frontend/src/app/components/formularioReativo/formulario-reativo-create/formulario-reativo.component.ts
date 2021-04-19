@@ -12,8 +12,8 @@ import { FormularioReativoService } from '../formulario-reativo.service';
 export class FormularioReativoComponent implements OnInit {
 
   formulario: FormGroup
-  constructor(private spinnerService: NgxSpinnerService, private formBuilder: FormBuilder, private fRService: FormularioReativoService,
-    private router: Router) { }
+  constructor(private spinnerService: NgxSpinnerService, private formBuilder: FormBuilder,
+    private fRService: FormularioReativoService, private router: Router) { }
 
   ngOnInit(): void {
     this.formulario = new FormGroup({
@@ -25,18 +25,26 @@ export class FormularioReativoComponent implements OnInit {
   };
   
   onSubmit(formDirective: FormGroupDirective): void {
+    this.mostrarCarregando();
+    this.inserirPessoa(formDirective);
+  }
+  
+  private inserirPessoa(formDirective: FormGroupDirective) {
+    this.fRService.create(this.formulario.value).subscribe(() => {
+      formDirective.resetForm();
+      this.fRService.ShowMessage("Pessoa inserida!");
+      this.formulario.reset();
+      this.router.navigate(["/formulario-reativo"]);
+    });
+  }
+
+  private mostrarCarregando() {
     this.spinnerService.show();
     setTimeout(() => {
       this.spinnerService.hide();
     }, 500);
-    this.fRService.create(this.formulario.value).subscribe(() => {
-      formDirective.resetForm();
-      this.fRService.ShowMessage("Pessoa inserida!")
-      this.formulario.reset()
-    })
-    this.router.navigate(["/formulario-reativo"])
   }
-  
+
   cancelar() {
     this.formulario.reset()
     this.router.navigate(["/formulario-reativo"])

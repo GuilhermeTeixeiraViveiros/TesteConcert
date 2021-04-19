@@ -17,12 +17,22 @@ export class ColaboradorReadComponent implements OnInit {
 
   constructor(private spinnerService: NgxSpinnerService, private colaboradorService: ColaboradorService) { }
   displayedColumns = ['id', 'nome', 'CPF', 'nascimento', 'genero', 'ativo', 'setor', 'update', 'delete'];
+  
   ngOnInit(): void {
+    this.mostrarCarregando();
+    this.listarColaboradores();
+  }
+
+  private listarColaboradores() {
+    this.colaboradorService.read().subscribe(colaborador => {
+      this.todosColaboradores = colaborador;
+      this.colaboradoresExibidos = this.todosColaboradores;
+      console.log(this.colaboradoresExibidos);
+    });
+  }
+
+  private mostrarCarregando() {
     this.spinnerService.show();
-    this.colaboradorService.read().subscribe(colaborador =>{
-      this.todosColaboradores = colaborador
-      this.colaboradoresExibidos = colaborador
-    })
     setTimeout(() => {
       this.spinnerService.hide();
     }, 2000);

@@ -24,21 +24,33 @@ export class ColaboradorUpdateComponent implements OnInit {
   constructor(private spinnerService: NgxSpinnerService, private colaboradorService : ColaboradorService, private router: Router, 
     private route: ActivatedRoute) { }
     ngOnInit(): void {
-      const id = this.route.snapshot.paramMap.get('id')
-      this.colaboradorService.readById(id).subscribe(colaborador =>{
-        this.colaborador = colaborador
-    });
+      this.obterColaboradorPorId();
   }
 
   updateColaborador(): void{
+    this.mostrarCarregando();
+    this.atualizarColaborador();
+  }
+
+  private obterColaboradorPorId() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.colaboradorService.readById(id).subscribe(colaborador => {
+      this.colaborador = colaborador;
+    });
+  }
+
+  private atualizarColaborador() {
+    this.colaboradorService.update(this.colaborador).subscribe(() => {
+      this.colaboradorService.ShowMessage('Colaborador atualizado!');
+      this.router.navigate(['/colaboradores']);
+    });
+  }
+
+  private mostrarCarregando() {
     this.spinnerService.show();
     setTimeout(() => {
       this.spinnerService.hide();
     }, 500);
-    this.colaboradorService.update(this.colaborador).subscribe(()=>{
-      this.colaboradorService.ShowMessage('Colaborador atualizado!')
-    })
-    this.router.navigate(['/colaboradores'])
   }
 
   cancel(): void{

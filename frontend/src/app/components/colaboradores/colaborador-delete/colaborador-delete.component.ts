@@ -23,15 +23,19 @@ export class ColaboradorDeleteComponent implements OnInit {
   }
   
 deleteColaborador(): void{
-  this.spinnerService.show();
-  setTimeout(() => {
-    this.spinnerService.hide();
-  }, 500);
+  this.mostrarCarregando();
   this.colaboradorService.delete(this.id).subscribe(()=>{
     this.colaboradorService.ShowMessage('Colaborador excluído')
+    this.router.navigate(['/colaboradores'])
   })
-  this.router.navigate(['/colaboradores'])
 }
+
+  private mostrarCarregando() {
+    this.spinnerService.show();
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 500);
+  }
 
   cancel(): void{
     this.router.navigate(['/colaboradores'])

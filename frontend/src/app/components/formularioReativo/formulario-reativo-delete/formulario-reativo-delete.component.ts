@@ -24,37 +24,48 @@ export class FormularioReativoDeleteComponent implements OnInit {
   })
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
-      this.fRService.readById(id).subscribe((pessoa) => {
-      this.pessoa = pessoa
+    this.ObterPessoaPorId();
+  }
+
+  private ObterPessoaPorId() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.fRService.readById(id).subscribe((pessoa) => {
+      this.pessoa = pessoa;
       this.formulario.patchValue({
         nome: pessoa.nome,
         email: pessoa.email,
         idade: pessoa.idade,
         id: pessoa.id
-      })
-    })
+      });
+    });
   }
 
   onSubmit(formDirective: FormGroupDirective): void {
-    this.spinnerService.show();
-  setTimeout(() => {
-    this.spinnerService.hide();
-  }, 500);
-    const id = this.formulario.controls['id'].value
-      this.fRService.delete(id).subscribe(() => {
-      formDirective.resetForm();
-      this.fRService.ShowMessage("Pessoa excluída!")
-      this.formulario.reset()
-    })
-    this.router.navigate(["/formulario-reativo"])
+    this.mostrarCarregando();
+    this.deletaPessoa(formDirective);
   }
   
+  private deletaPessoa(formDirective: FormGroupDirective) {
+    const id = this.formulario.controls['id'].value;
+    this.fRService.delete(id).subscribe(() => {
+      formDirective.resetForm();
+      this.fRService.ShowMessage("Pessoa excluída!");
+      this.formulario.reset();
+      this.router.navigate(["/formulario-reativo"]);
+    });
+  }
+
+  private mostrarCarregando() {
+    this.spinnerService.show();
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 500);
+  }
+
   cancelar() {
     this.formulario.reset()
     this.router.navigate(["/formulario-reativo"])
   }
-  
 }
 
 
