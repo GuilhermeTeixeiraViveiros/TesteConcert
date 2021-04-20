@@ -47,3 +47,4 @@ Foi requisitado no projeto 2 páginas de CRUD com as seguintes especificações:
 
 ### A APLICAÇÃO ESTARÁ DISPONÍVEL EM: 'localhost:4200' ou no endereço fornecido pelo output do comando de inicialização do frontend( npm start)
  
+### A Aplicação também foi publicada em http://teste-concert.s3-website-sa-east-1.amazonaws.com/. Porém para mockar o backend foi utilizado o https://my-json-server.typicode.com/. Assim, os dados são fixos e não é possível fazer alterações (Changes are faked and aren't persisted).
